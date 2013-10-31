@@ -9,8 +9,8 @@ IMPROVEMENTS:
 
 BUG FIXES:
 
-  - Do not show .po file headers on translated pages. (ff6edc6483cc7ebe036b7001d064294545165967, Debian bug: [#680754][1])
-  - [PATCH] parse tags properly using {} in parameters (1f044a76, [Kalle Volkov][2])
+  - Do not show .po file headers on translated pages. (Debian bug: [#680754][1])
+  - [PATCH] parse tags properly using {} in parameters ([Kalle Volkov][2])
 
 ## 1.0b1 (2005-07-27 Sagi Bashari)
 
