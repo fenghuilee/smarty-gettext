@@ -2,7 +2,7 @@
 
 IMPROVEMENTS:
 
-  - added manual page for `tsmarty2c.php` (748dbdc from Debian)
+  - added manual page for `tsmarty2c.php` (from Debian)
   - `tsmarty2c.php` outputs now valid `.po` format (can be used to merge with `.pot`
   - added composer repository. add to your `composer.json`: `"glen/smarty-gettext"`
   - unit tests!
