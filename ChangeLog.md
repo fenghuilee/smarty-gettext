@@ -21,8 +21,8 @@ BUG FIXES:
 	- Renamed file to block.t.php
 
 * block.t.php:
-	- Rename smarty_translate() to smarty_block_t()
-	- Rename strarg() to smarty_gettext_strarg
+	- Rename `smarty_translate()` to `smarty_block_t()`
+	- Rename `strarg()` to `smarty_gettext_strarg()`
 	- Better comments, new installation method
 	- url escaping method
 
@@ -50,10 +50,10 @@ BUG FIXES:
 * tsmarty2c.php:
 	- added support for directories (originally by [Uros Gruber][4])
 	- fixed bug that prevented more than 1 block per line (reported by [Eneko Lacunza][5])
-	- convert new line to \n in output string
+	- convert new line to `\n` in output string
 
 * smarty_gettext.php:
-	- run nl2br() when escaping html
+	- run `nl2br()` when escaping html
 
 
   [1]: http://bugs.debian.org/680754
