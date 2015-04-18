@@ -9,7 +9,7 @@ php:
   - hhvm
 
 before_install:
-  - sudo apt-get update && travis_retry sudo apt-get --reinstall install -qq language-pack-pl
+  - sudo apt-get update && travis_retry sudo apt-get --reinstall install -qq language-pack-{et,pl}
   - dpkg --list | grep language-pack
   - locale -a
   # enable EZC for hhvm
@@ -18,3 +18,6 @@ before_install:
 
 install:
   - composer install --no-interaction --prefer-source
+
+script:
+  - env -i LC_ALL=et_EE.utf8 php -r 'print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo strftime("%A, %d. %B");'
