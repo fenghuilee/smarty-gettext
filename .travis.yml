@@ -25,11 +25,6 @@ script:
     # https://github.com/php/php-src/commit/7e0baa7a1daa531e39881e59842c88d12e42c901
     # they shouldn't do any, or do LC_ALL, ""
     # https://bugs.php.net/bug.php?id=69481
-#  - env -i LC_ALL=et_EE.utf8 php -r 'setlocale(LC_ALL, ""); print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo "PHP:", strftime("%A, %d. %B"), "\n";'
-#  - strace -ff -efile phpunit -v --debug tests/LocaleTest.php || rc=$?
   - phpunit -v --debug tests/LocaleTest.php || rc=$?
-#  - ls -lR
-  - php -r 'setlocale(LC_ALL, "et_EE.UTF-8"); var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo "PHP:", strftime("%A, %d. %B"), "\n";'
-  - php -r 'setlocale(LC_ALL, "pl_PL.UTF-8"); var_dump(setlocale(LC_ALL, 0)); $domain="messages";$path="tests/data/i18n"; bind_textdomain_codeset($domain, "UTF-8"); bindtextdomain($domain, $path); textdomain($domain); echo _("My site name");'
-#  - strace -ff php -r 'setlocale(LC_ALL, "pl_PL"); var_dump(setlocale(LC_ALL, 0)); $domain="messages";$path="tests/data/i18n"; bind_textdomain_codeset($domain, "UTF-8"); bindtextdomain($domain, $path); textdomain($domain); echo _("My site name");'
-#  - exit $rc
+  - php -r 'setlocale(LC_ALL, "et_EE.UTF-8"); var_dump(setlocale(LC_ALL, 0)); passthru("date +%A%d.%B"); echo "PHP:", strftime("%A, %d. %B"), "\n";'
+  - php -r 'setlocale(LC_ALL, "pl_PL.UTF-8"); var_dump(setlocale(LC_ALL, 0)); $domain="messages";$path="tests/data/i18n"; bind_textdomain_codeset($domain, "UTF-8"); bindtextdomain($domain, $path); textdomain($domain); echo _("My site name"), "\n";'
