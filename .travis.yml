@@ -21,3 +21,4 @@ install:
 
 script:
   - env -i LC_ALL=et_EE.utf8 php -r 'print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo strftime("%A, %d. %B");'
+  - phpunit tests/LocaleTest.php
