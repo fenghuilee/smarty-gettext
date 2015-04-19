@@ -20,5 +20,8 @@ install:
   - composer install --no-interaction --prefer-source
 
 script:
-	- env -i LC_ALL=et_EE.utf8 php -r 'print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo "PHP:", strftime("%A, %d. %B"), "\n";'
+	# php sucks, they do only LC_CTYPE, ""
+	# https://github.com/php/php-src/commit/7e0baa7a1daa531e39881e59842c88d12e42c901
+	# they shouldn't do any, or do LC_ALL, ""
+	- env -i LC_ALL=et_EE.utf8 php -r 'setlocale(LC_ALL, ""); print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo "PHP:", strftime("%A, %d. %B"), "\n";'
   - phpunit tests/LocaleTest.php
