@@ -26,4 +26,6 @@ script:
     # they shouldn't do any, or do LC_ALL, ""
     # https://bugs.php.net/bug.php?id=69481
   - env -i LC_ALL=et_EE.utf8 php -r 'setlocale(LC_ALL, ""); print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo "PHP:", strftime("%A, %d. %B"), "\n";'
-  - phpunit tests/LocaleTest.php
+  - phpunit -v --debug tests/LocaleTest.php || rc=$?
+  - ls -lR
+  - exit $rc
