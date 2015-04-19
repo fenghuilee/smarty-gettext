@@ -20,5 +20,5 @@ install:
   - composer install --no-interaction --prefer-source
 
 script:
-  - env -i LC_ALL=et_EE.utf8 php -r 'print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo strftime("%A, %d. %B");'
+	- env -i LC_ALL=et_EE.utf8 php -r 'print_r($_ENV);var_dump(setlocale(LC_ALL, 0)); passthru("env; date +%A%d.%B"); echo "PHP:", strftime("%A, %d. %B"), "\n";'
   - phpunit tests/LocaleTest.php
