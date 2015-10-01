@@ -34,9 +34,9 @@ function smarty_function_locale($params, &$smarty) {
 		$stack = array();
 	}
     
-    $locale = isset($params['locale']) ? $params['locale'] : 'en_US';
-    putenv("LANG=".$locale);
-    setlocale(LC_ALL, $locale);
+    $lang = isset($params['lang']) ? $params['lang'] : 'en_US';
+    putenv("LANG=".$lang);
+    setlocale(LC_ALL, $lang);
     
     $template_array_key = isset($params['template_array_key']) ? $params['template_array_key'] : '0';
 
