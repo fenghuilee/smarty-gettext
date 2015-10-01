@@ -34,9 +34,9 @@ This package has two parts:
 
 With Composer:
 
-- Add the `"fenghuilee/smarty-gettext": "~1.2.0"` into the `require` section of your `composer.json`:
+- Add the `"fenghuilee/smarty-gettext": "dev-master"` into the `require` section of your `composer.json`:
 ```
-composer require fenghuilee/smarty-gettext=~1.2.0
+composer require fenghuilee/smarty-gettext=dev-master
 ```
 - Run `composer install`.
 
