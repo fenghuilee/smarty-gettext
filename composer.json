@@ -1,7 +1,7 @@
 {
-	"name": "smarty-gettext/smarty-gettext",
+	"name": "fenghuilee/smarty-gettext",
 	"description": "Gettext plugin enabling internationalization in Smarty Package files",
-	"homepage": "https://github.com/smarty-gettext/smarty-gettext",
+	"homepage": "https://github.com/fenghuilee/smarty-gettext",
 	"license": "LGPL-2.1+",
 	"authors": [
 		{
@@ -11,10 +11,14 @@
 		{
 			"name": "Elan Ruusamäe",
 			"email": "glen@delfi.ee"
+		},
+		{
+			"name": "FenghuiLee",
+			"email": "fenghuilee@gmail.com"
 		}
 	],
 	"support": {
-		"issues": "https://github.com/smarty-gettext/smarty-gettext/issues"
+		"issues": "https://github.com/fenghuilee/smarty-gettext/issues"
 	},
 	"autoload": {
 		"files": [
