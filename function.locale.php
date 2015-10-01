@@ -38,7 +38,7 @@ function smarty_function_locale($params, &$smarty) {
     putenv("LANG=".$lang);
     setlocale(LC_ALL, $lang);
     
-	$path = $params['path'];
+	$path = isset($params['path']) ? $params['path'] : './locale';
 	$domain = isset($params['domain']) ? $params['domain'] : 'messages';
 	$stack_operation = isset($params['stack']) ? $params['stack'] : 'push';
 
